@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/bv_trabalhe_conosco/prototype.maskedinput.js</name></action>	
+        </reference>
+     </default>
+</layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BV_Trabalhe>
+            <version>1.0.0</version>
+        </BV_Trabalhe>
+    </modules>
+    <frontend>
+        <routers>
+            <BVTrabalhe>
+                <use>standard</use>
+                <args>
+                    <module>BV_Trabalhe</module>
+                    <frontName>trabalhe-conosco</frontName>
+                </args>
+            </BVTrabalhe>
+        </routers>
+        <layout>
+            <updates>
+                <bv_trabalhe>
+                    <file>bv_trabalhe_conosco.xml</file>
+                </bv_trabalhe>
+            </updates>
+        </layout>
+    </frontend>    
+     <global>
+	    <template>
+	        <email>
+	            <bv_trabalhe_template module="BV_Trabalhe">
+	                <label>Trabalhe Conosco</label>
+	                <file>trabalhe_form.html</file>
+	                <type>html</type>
+	            </bv_trabalhe_template>
+	        </email>
+	    </template>
+	</global> 
+</config>

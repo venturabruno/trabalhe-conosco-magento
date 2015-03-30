@@ -1,0 +1,70 @@
+<?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
+<div class="box simple_contact">
+	<form id="trabalhe-form" name="simple_contact_form"
+		action="<?php echo $this->getUrl('trabalhe-conosco/') ?>index/sendemail"
+		method="post" enctype="multipart/form-data">
+
+		<div class="content fieldset">
+			<h4 class="legend">Trabalhe conosco</h4>
+			<ul class="form-list">
+				<li>
+					<div class="input-box">
+						<label class="required" for="name">Nome<em>*</em></label><br />
+						<input name="name" id="name" title="Name" value=""
+							class="required-entry input-text" type="text" />
+					</div>
+					
+					<div class="input-box">
+						<label class="required" for="email">E-mail<em>*</em></label><br />
+						<input name="email" id="email" title="Email" value=""
+							class="required-entry input-text validate-email" type="text" />
+					</div>
+					
+					<div class="input-box">
+						<label for="endereco">Endereço</label><br />
+						<input name="endereco" id="endereco" title="Endereço" value=""
+							class="input-text" type="text" />
+					</div>
+					
+					<div class="input-box">
+						<label for="cep">Cep</label><br />
+						<input name="cep" id="cep" title="Cep" value=""
+							class="input-text" type="text" />
+					</div>
+					
+					<div class="input-box">
+						<label for="rg">RG</label><br />
+						<input name="rg" id="rg" title="RG" value=""
+							class="input-text" type="text" />
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="input-box">
+						<label for="comment">Carta de apresentação</label><br />
+						<textarea name="comment" id="comment" title="Comment"
+							class="required-entry input-text" style="height: 100px;"
+							cols="50" rows="3"></textarea>
+					</div>
+					<div class="input-box">
+						<input name="MAX_FILE_SIZE" type="hidden" value="2000000" /> <input
+							name="attachment" id="attachment" class="input-text" type="file" />
+					</div>
+				
+				</li>
+			</ul>
+		</div>
+		<div class="button-set">
+			<p class="required">* Required Fields</p>
+			<button class="form-button" type="submit">
+				<span>Submit</span>
+			</button>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('trabalhe-form', true);
+    var maskCep =  new MaskedInput('#trabalhe-form #cep', '99999-999'); 
+//]]>
+</script>
